@@ -32,6 +32,7 @@ nav.goods-categories {
   padding: 2.7778% 8.3333%; /*30px 90px;*/
   box-shadow: 10px 10px 30px 3px #f1f2f2;
   color: #333333;
+  align-items: center;
 }
 
 nav.goods-categories a {

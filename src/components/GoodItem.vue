@@ -137,9 +137,11 @@ export default {
   display: inline-block;
   border-radius: 100px;
   bottom: -25px;
-  left: 85px;
+  left: 50%;
+  transform: translate(-50%, 0);
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   text-decoration: none;
+  min-width: max-content;
 }
 </style>

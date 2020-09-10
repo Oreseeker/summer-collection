@@ -28,11 +28,14 @@
     </div>
     <!-- Start of swtichable goods block-->
     <substrate>
+      <section class="switchable-goods">
       <h1>Our Showcase</h1>
       <nav-bar :menu-items="menuItems" />
+      <dropdown-menu :categories="menuItems"/>
       <div class="wrapper">
         <good-item v-for="watch in watches" :key="watch.id" :good="watch" />
       </div>
+      </section>
     </substrate>
     <!-- End of switchable goods block -->
     <div class="newsletter-block">
@@ -67,13 +70,15 @@ import Substrate from "./components/Substrate.vue";
 import ImageText from "./components/ImageText.vue";
 import NavBar from "./components/NavBar.vue";
 import InputNestedButton from "./components/InputNestedButton.vue";
+import DropdownMenu from "./components/DropdownMenu.vue";
 export default {
   components: {
     GoodItem,
     Substrate,
     ImageText,
     NavBar,
-    InputNestedButton
+    InputNestedButton, 
+    DropdownMenu
   },
   data() {
     return {
@@ -192,6 +197,9 @@ export default {
 </script>
 
 <style>
+html {
+  font-size: 20px;
+}
 body {
   margin: 0;
 }
@@ -247,7 +255,7 @@ body {
 }
 
 footer nav {
-  width: 32.5% !important;
+  width: 400px !important;
   padding: 0 !important;
 }
 
@@ -289,7 +297,7 @@ footer .our-links {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 22.5%; /* 360px */
+  width: 300px; /* 360px */
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -328,31 +336,52 @@ footer .our-links {
   text-align: center;
 }
 
+  .dropdown {
+    display: none;
+  }
+
 @media screen and (max-width: 1160px) {
   .brand-block {
     padding: 40px;
   }
+  .switchable-goods nav {
+    width: 100%!important;
+  }
 }
 
 @media screen and (max-width: 1145px) {
+  html {
+    font-size: 20px;
+  }
   .brand-block {
     text-align: center;
     margin-top: 60px;
   }
 }
 
-@media screen and (max-width: 888px) {
-footer .our-links {
-  width: 300px;
-}
-footer nav {
-  width: 80%!important;
-}
+@media screen and (max-width: 672px) {
+  .switchable-goods nav {
+    display: none!important;
+  }
+  .dropdown {
+    display: block;
+  }
 }
 @media screen and (max-width: 544px) {
   #phone {
     height: auto;
     width: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer nav {
+    flex-direction: column!important;
+    box-shadow: none!important;
+    border-radius: 0!important;
+    width: 80%!important;
+  }
+  footer nav a {
+    margin-bottom: 10px;
   }
 }
 </style>
