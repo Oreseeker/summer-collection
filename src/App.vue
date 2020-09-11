@@ -24,17 +24,17 @@
           nisl vitae orci vehicula faucibus. Fusce et lat, feugiat est
         </template>
       </image-text>
-      <img src="@/assets/phone.png" id="phone"/>
+      <img src="@/assets/phone.png" id="phone" />
     </div>
     <!-- Start of swtichable goods block-->
     <substrate>
       <section class="switchable-goods">
-      <h1>Our Showcase</h1>
-      <nav-bar :menu-items="menuItems" />
-      <dropdown-menu :categories="menuItems"/>
-      <div class="wrapper">
-        <good-item v-for="watch in watches" :key="watch.id" :good="watch" />
-      </div>
+        <h1>Our Showcase</h1>
+        <nav-bar :menu-items="menuItems" />
+        <dropdown-menu :categories="menuItems" />
+        <div class="wrapper">
+          <good-item v-for="watch in watches" :key="watch.id" :good="watch" />
+        </div>
       </section>
     </substrate>
     <!-- End of switchable goods block -->
@@ -77,7 +77,7 @@ export default {
     Substrate,
     ImageText,
     NavBar,
-    InputNestedButton, 
+    InputNestedButton,
     DropdownMenu
   },
   data() {
@@ -336,16 +336,16 @@ footer .our-links {
   text-align: center;
 }
 
-  .dropdown {
-    display: none;
-  }
+.dropdown {
+  display: none;
+}
 
 @media screen and (max-width: 1160px) {
   .brand-block {
     padding: 40px;
   }
   .switchable-goods nav {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
 
@@ -359,9 +359,51 @@ footer .our-links {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .input-nested-button {
+    width: 544px !important;
+  }
+  .input-nested-button input[type="text"] {
+    font-size: 18px !important;
+    height: 65px;
+  }
+  .submit-letter {
+    font-size: 18px !important;
+    top: 2px !important;
+    right: 3px !important;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  .input-nested-button {
+    width: 100% !important;
+  }
+  .input-nested-button input[type="text"] {
+    width: 70%;
+    height: 65px;
+    font-size: 18px;
+    box-sizing: content-box;
+  }
+  .submit-letter {
+    position: relative !important;
+    display: block;
+    margin: 10px auto;
+    background-color: white !important;
+    color: #8c84f9 !important;
+    right: 0 !important;
+    font-size: 18px !important;
+  }
+  .newsletter-block h1 {
+    font-size: 55px;
+  }
+  .newsletter-block {
+    margin-top: 0px;
+  }
+}
+
 @media screen and (max-width: 672px) {
   .switchable-goods nav {
-    display: none!important;
+    display: none !important;
   }
   .dropdown {
     display: block;
@@ -375,10 +417,10 @@ footer .our-links {
 }
 @media screen and (max-width: 450px) {
   footer nav {
-    flex-direction: column!important;
-    box-shadow: none!important;
-    border-radius: 0!important;
-    width: 80%!important;
+    flex-direction: column !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 80% !important;
   }
   footer nav a {
     margin-bottom: 10px;

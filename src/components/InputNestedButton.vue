@@ -12,9 +12,15 @@ export default {};
 </script>
 
 <style scoped>
+.input-nested-button {
+  width: 850px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
 input[type="text"] {
   display: block;
-  width: 53.125%; /*850px;*/
+  width: 100%; /*850px;*/
   height: 75px;
   margin: 0 auto;
   border-radius: 100px;
@@ -24,6 +30,7 @@ input[type="text"] {
   font-weight: 400px;
   font-size: 1.25rem;
   outline: none;
+  box-sizing: border-box;
 }
 
 .submit-letter {
@@ -32,8 +39,8 @@ input[type="text"] {
   font-size: 1.25rem;
   color: white;
   position: absolute;
-  right: 22%;
-  top: 49.7%;
+  right: 5px;
+  top: 3px;
   background-color: #8c84f9;
   padding: 20px 65px;
   border-radius: 100px;
